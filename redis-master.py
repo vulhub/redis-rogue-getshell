@@ -129,7 +129,6 @@ def main():
     parser.add_argument('-c', '--command', type=str, help='Command that you want to execute', default='id')
 
     parser.add_argument("-a", "--auth", dest="auth", type=str, help="redis password")
-    parser.add_argument("-v", "--verbose", action="store_true", help="show more info", default=False)
     options = parser.parse_args()
 
     filename = options.file
